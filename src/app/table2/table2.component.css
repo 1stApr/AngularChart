@@ -1,0 +1,28 @@
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+
+}
+
+td, th {
+  /* border: 1px solid #dddddd; */
+  /* text-align: left; */
+
+}
+text-left{
+  text-align: left;
+}
+text-right{
+  text-align: right;
+}
+.table-row {
+  height: 30px !important;
+}
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+th.mat-sort-header-sorted {
+  color: black;
+}
