@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse, HttpParams } from '@angular/common/http';
 import { throwError } from 'rxjs';
-import { Costing1 } from './costing';
-import { Service1 } from './service';
-import { TotalCost1 } from './total_cost';
+import { Costing } from './costing';
+import { Service } from './service';
+import { TotalCost } from './total_cost';
+import { ServicesBreakdown } from './services_breakdown';
 @Injectable({
   providedIn: 'root'
 })
@@ -18,13 +19,17 @@ export class DataService {
   // }
 
   public sendGetRequestCostUrl(url: string){
-    return this.httpClient.get<Costing1[]>(url, {  params: new HttpParams({fromString: "_page=1&_limit=2000"}), observe: "response"});
+    return this.httpClient.get<Costing[]>(url, {  params: new HttpParams({fromString: "_page=1&_limit=2000"}), observe: "response"});
   }
   public sendGetRequestServiceUrl(url: string){
-    return this.httpClient.get<Service1[]>(url, {  params: new HttpParams({fromString: "_page=1&_limit=2000"}), observe: "response"});
+    return this.httpClient.get<Service[]>(url, {  params: new HttpParams({fromString: "_page=1&_limit=2000"}), observe: "response"});
   }
+  public sendGetRequestServicesBreakdownUrl(url: string){
+    return this.httpClient.get<ServicesBreakdown[]>(url, {  params: new HttpParams({fromString: "_page=1&_limit=2000"}), observe: "response"});
+  }
+
   public sendGetRequestTotalCostUrl(url: string){
-    return this.httpClient.get<TotalCost1[]>(url, {  params: new HttpParams({fromString: "_page=1&_limit=2000"}), observe: "response"});
+    return this.httpClient.get<TotalCost[]>(url, {  params: new HttpParams({fromString: "_page=1&_limit=2000"}), observe: "response"});
   }
   handleError(error: HttpErrorResponse) {
     let errorMessage = 'Unknown error!';
@@ -37,3 +42,5 @@ export class DataService {
     }
     window.alert(errorMessage);
     return throwError(errorMessage);
+  }
+}

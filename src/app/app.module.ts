@@ -13,6 +13,7 @@ import { PieChartComponent } from './pie-chart/pie-chart.component';
 import { DemoMaterialModule } from './material-module';
 import { BarChartComponent } from './bar-chart/bar-chart.component';
 import { Table2Component } from './table2/table2.component';
+import { TotalCostComponent } from './total-cost/total-cost.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { Table2Component } from './table2/table2.component';
     TableChartComponent,
     PieChartComponent,
     BarChartComponent,
-    Table2Component
+    Table2Component,
+    TotalCostComponent
 
   ],
   imports: [

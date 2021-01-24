@@ -26,12 +26,11 @@ export class HomeComponent implements OnInit {
   public static columnNamesTable = ["INSTANCE TYPE", "ON DEMAND HOURS","RESERVED HOURS","TOTAL HOURS","COVERAGE"];
 
   public static dataPieChart = [
-    ['EC2',  102.2 ],
-    ['EFS',   123.6 ],
-    ['OTHER', 850.36 ],
-    ['S3',  125.69 ],
-    ['SUPPORT',  1785],
-    ['TOTAL',  1285.2 ],
+    ['EC2',  2055.97 ],
+    ['EFS',   0 ],
+    ['OTHER', 234.32 ],
+    ['S3',  10.69 ],
+    ['SUPPORT',  0],
   ];
 
   public static dataBarChart = [
@@ -56,8 +55,8 @@ export class HomeComponent implements OnInit {
 
   constructor(private dataService: DataService) { }
   ngOnInit() {
-    this.getService();
-    this.getCost();
+    // this.getService();
+    // this.getCost();
   }
 
   getData(){
