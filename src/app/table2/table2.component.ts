@@ -1,10 +1,6 @@
-import { AfterViewInit ,Component, OnInit, ViewChild } from '@angular/core';
-import { MatTableDataSource } from '@angular/material/table';
-import { DataService } from '../data.service';
-import { takeUntil } from 'rxjs/operators';
-import { HttpResponse } from '@angular/common/http';
-import { Subject } from 'rxjs';
+import { Component, OnInit} from '@angular/core';
 import { ServicesBreakdown } from '../services_breakdown';
+import { AppComponent } from '../app.component';
 
 @Component({
   selector: 'app-table2',
@@ -14,25 +10,13 @@ import { ServicesBreakdown } from '../services_breakdown';
 export class Table2Component implements OnInit  {
 
   servicesBreakdown = new ServicesBreakdown ;
+  total = 0;
   ngOnInit(): void {
+    console.log("Run ServicesBreakdown Component")
     this.getServicesBreakdown()
   }
-  ngOnDestroy() {
-    this.destroy$.next(true);
-    // Unsubscribe from the subject
-    this.destroy$.unsubscribe();
-  }
-
-  constructor(private dataService: DataService) { }
-  destroy$: Subject<boolean> = new Subject<boolean>();
-  private REST_API_SERVER = 'http://localhost:3000/servicesBreakdown';
-
   getServicesBreakdown(){
-    this.dataService.sendGetRequestServicesBreakdownUrl(this.REST_API_SERVER)
-    .pipe(takeUntil(this.destroy$)).subscribe((res: HttpResponse<any>)=>{
-      console.log("GetServiceBreakdown");
-      this.servicesBreakdown = res.body[0];
-    })
+    this.servicesBreakdown = AppComponent.servicesBreakdown;
+    this.total= this.servicesBreakdown.EC2+this.servicesBreakdown.EFS+this.servicesBreakdown.OTHER+this.servicesBreakdown.S3+this.servicesBreakdown.SUPPORT;
   }
-
 }

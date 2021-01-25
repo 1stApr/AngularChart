@@ -1,7 +1,17 @@
-<google-chart #chart
-   [type]="type"
-   [data]="data"
-   [columns]="columnNameBarChart"
-   [options]="options"
-   >
-</google-chart>
+<br><br>
+<div style="text-align:center">
+  <div style="display: block">
+    <canvas
+      baseChart
+
+      height="250"
+      [datasets]="barChartData"
+      [labels]="barChartLabels"
+      [options]="barChartOptions"
+      [colors]="barChartColors"
+      [legend]="barChartLegend"
+      [chartType]="barChartType"
+
+    ></canvas>
+  </div>
+</div>

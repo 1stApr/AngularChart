@@ -10,6 +10,7 @@
   </mat-toolbar>
   <br>
   <div *ngIf="isShow; else noShow">
+    <app-home></app-home>
     <app-total-cost></app-total-cost>
     <br>
     <div class="container">
@@ -39,8 +40,6 @@
 
       </div>
     </div>
-
-    <app-home></app-home>
   </div>
   <ng-template #noShow>
     <div>

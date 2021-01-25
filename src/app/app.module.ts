@@ -3,6 +3,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ChartsModule } from 'ng2-charts';
 import { HomeComponent } from './home/home.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -19,11 +20,11 @@ import { TotalCostComponent } from './total-cost/total-cost.component';
   declarations: [
     AppComponent,
     HomeComponent,
-    TableChartComponent,
     PieChartComponent,
     BarChartComponent,
     Table2Component,
-    TotalCostComponent
+    TotalCostComponent,
+    TableChartComponent,
 
   ],
   imports: [
@@ -35,6 +36,7 @@ import { TotalCostComponent } from './total-cost/total-cost.component';
     MatButtonModule,
     GoogleChartsModule,
     DemoMaterialModule,
+    ChartsModule
 
   ],
   providers: [],
