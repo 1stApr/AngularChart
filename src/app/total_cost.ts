@@ -4,5 +4,6 @@ export class TotalCost {
   estimatedSpend:number;
   lastMonth:number;
   changeFromLastMonth:number;
+  currency: string;
 
 }

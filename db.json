@@ -48,10 +48,11 @@
 
   "totalCost":[
     {
-      "monthToDate": 2300.97,
-      "estimatedSpend": 2624.49,
+      "monthToDate": 2300,
+      "estimatedSpend": 2624.9,
       "lastMonth": 285.42,
-      "changeFromLastMonth": 2339.08
+      "changeFromLastMonth": 2339.083,
+      "currency": "$"
     }
   ],
 
@@ -62,7 +63,7 @@
         "OTHER": 234.32 ,
         "S3":  1000.69 ,
         "SUPPORT":  120.3,
-        "TOTAL":  2300.97
+        "currency":  "$"
     }
   ],
 

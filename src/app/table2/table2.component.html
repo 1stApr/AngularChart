@@ -6,27 +6,27 @@
 
       <tr>
         <td><button type="button" class="btn btn-primary" style="background-color: #e0440e;border: none;"></button> EC2</td>
-        <td style="text-align: right;">{{servicesBreakdown.EC2}}</td>
+        <td style="text-align: right;">{{servicesBreakdown.currency}}{{servicesBreakdown.EC2|number:'2.2-2'}}</td>
       </tr>
       <tr>
         <td><button type="button" class="btn btn-primary" style="background-color: #17e428;border: none;"></button> EFS</td>
-        <td style="text-align: right;">{{servicesBreakdown.EFS}}</td>
+        <td style="text-align: right;">{{servicesBreakdown.currency}}{{servicesBreakdown.EFS|number:'2.2-2'}}</td>
       </tr>
       <tr>
         <td><button type="button" class="btn btn-primary" style="background-color: #c0ec6e;border: none;"></button> OTHER</td>
-        <td style="text-align: right;">{{servicesBreakdown.OTHER}}</td>
+        <td style="text-align: right;">{{servicesBreakdown.currency}}{{servicesBreakdown.OTHER|number:'2.2-2'}}</td>
       </tr>
       <tr>
         <td><button type="button" class="btn btn-primary" style="background-color: #fc0000;border: none;"></button> S3</td>
-        <td style="text-align: right;">{{servicesBreakdown.S3}}</td>
+        <td style="text-align: right;">{{servicesBreakdown.currency}}{{servicesBreakdown.S3|number:'2.2-2'}}</td>
       </tr>
       <tr>
         <td><button type="button" class="btn btn-primary" style="background-color: #0038f1;border: none;"></button> SUPPORT</td>
-        <td style="text-align: right;">{{servicesBreakdown.SUPPORT}}</td>
+        <td style="text-align: right;">{{servicesBreakdown.currency}}{{servicesBreakdown.SUPPORT|number:'2.2-2'}}</td>
       </tr>
       <tr style="font-weight: bold;">
         <td><button type="button" class="btn btn-primary" style="background-color: #ffffff00;border: none;"></button> TOTAL</td>
-        <td style="text-align: right;">{{total}}</td>
+        <td style="text-align: right;">{{servicesBreakdown.currency}}{{total|number:'2.2-2'}}</td>
       </tr>
     </tbody>
   </table>

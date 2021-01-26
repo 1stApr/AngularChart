@@ -5,7 +5,7 @@
 
   <ng-container matColumnDef="id">
     <th mat-header-cell *matHeaderCellDef mat-sort-header> No. </th>
-    <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+    <td mat-cell *matCellDef="let element"> {{element.id|number:'.2-2'}} </td>
   </ng-container>
 
   <ng-container matColumnDef="instanceType">
@@ -15,22 +15,22 @@
 
   <ng-container  matColumnDef="onDemandHours">
     <th mat-header-cell *matHeaderCellDef mat-sort-header> On Demand Hours </th>
-    <td mat-cell *matCellDef="let element" ><span style="color: brown;">{{element.onDemandHours}} </span> </td>
+    <td mat-cell *matCellDef="let element" ><span style="color: brown;">{{element.onDemandHours|number:'.2-2'}} </span> </td>
   </ng-container>
 
   <ng-container matColumnDef="reservedHours">
     <th mat-header-cell *matHeaderCellDef mat-sort-header> Reserved Hours </th>
-    <td mat-cell *matCellDef="let element"><span style="color:darkgreen"> {{element.reservedHours}}</span> </td>
+    <td mat-cell *matCellDef="let element"><span style="color:darkgreen"> {{element.reservedHours|number:'.2-2'}}</span> </td>
   </ng-container>
 
   <ng-container matColumnDef="totalHours">
     <th mat-header-cell *matHeaderCellDef mat-sort-header> Total Hours </th>
-    <td mat-cell *matCellDef="let element"> {{element.totalHours}} </td>
+    <td mat-cell *matCellDef="let element"> {{element.totalHours|number:'.2-2'}} </td>
   </ng-container>
 
   <ng-container matColumnDef="coverage">
     <th mat-header-cell *matHeaderCellDef mat-sort-header> Coverage </th>
-    <td mat-cell *matCellDef="let element"> {{element.coverage}} </td>
+    <td mat-cell *matCellDef="let element"> {{element.coverage|number:'.2-2'}}% </td>
   </ng-container>
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

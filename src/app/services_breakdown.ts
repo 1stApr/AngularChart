@@ -4,6 +4,5 @@ export class ServicesBreakdown {
     OTHER  :  number;
     S3  :  number;
     SUPPORT  :  number;
-    TOTAL  :  number ;
+    currency  :  string ;
   }
-  
