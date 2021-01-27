@@ -1,34 +1,28 @@
 <h3><p style="color:#1177bf;">RESERVATION COVERAGE</p></h3>
 <div style="overflow-x: auto;height: 250px;">
   <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
-
-  <ng-container matColumnDef="id">
-    <th mat-header-cell style="text-align: left;" *matHeaderCellDef mat-sort-header> No. </th>
-    <td mat-cell style="text-align: left;" *matCellDef="let element"> {{element.id}} </td>
-  </ng-container>
-
   <ng-container matColumnDef="instanceType">
-    <th mat-header-cell  *matHeaderCellDef mat-sort-header> Instance Type </th>
-    <td mat-cell *matCellDef="let element"> {{element.instanceType}} </td>
+    <th mat-header-cell style="text-align: left;" *matHeaderCellDef mat-sort-header> Instance Type </th>
+    <td mat-cell  style="text-align: left;" *matCellDef="let element"> {{element.instanceType}} </td>
   </ng-container>
 
   <ng-container  matColumnDef="onDemandHours">
-    <th mat-header-cell *matHeaderCellDef mat-sort-header> On Demand Hours </th>
+    <th mat-header-cell style="text-align: right;" *matHeaderCellDef > On Demand (h) </th>
     <td mat-cell *matCellDef="let element" ><span style="color: brown;">{{element.onDemandHours|number:'.2-2'}} </span> </td>
   </ng-container>
 
   <ng-container matColumnDef="reservedHours">
-    <th mat-header-cell *matHeaderCellDef mat-sort-header> Reserved Hours </th>
+    <th mat-header-cell style="text-align: right;" *matHeaderCellDef > Reserved (h) </th>
     <td mat-cell *matCellDef="let element"><span style="color:darkgreen"> {{element.reservedHours|number:'.2-2'}}</span> </td>
   </ng-container>
 
   <ng-container matColumnDef="totalHours">
-    <th mat-header-cell *matHeaderCellDef mat-sort-header> Total Hours </th>
+    <th mat-header-cell style="text-align: right;" *matHeaderCellDef > Total (h) </th>
     <td mat-cell *matCellDef="let element"> {{element.totalHours|number:'.2-2'}} </td>
   </ng-container>
 
   <ng-container matColumnDef="coverage">
-    <th mat-header-cell *matHeaderCellDef mat-sort-header> Coverage </th>
+    <th mat-header-cell style="text-align: right;"  *matHeaderCellDef>Coverage </th>
     <td mat-cell *matCellDef="let element"> {{element.coverage|number:'.2-2'}}% </td>
   </ng-container>
 

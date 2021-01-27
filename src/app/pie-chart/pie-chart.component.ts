@@ -15,9 +15,10 @@ export class PieChartComponent implements OnInit {
   public doughnutChartLabels: Label = ["EC2","EFS","OTHER","S3","SUPPORT"];
   public doughnutChartType: ChartType = "doughnut";
   public chartColors: Color[] = [{
-    backgroundColor: ['#e0440e', '#17e428', '#c0ec6e','#fc0000','#0038f1']
+    backgroundColor: ['#FFA1B5', '#86C7F3', '#FFE29A','#F1F2F4','#93D9D9']
   }];
   public options: any = {
+    responsive: true,
     legend:{
       display: false
 

@@ -15,7 +15,8 @@ export class BarChartComponent implements OnInit {
   dataServices: Service []=[];
   public barChartOptions: any = {
     scaleShowVerticalLines: false,
-    responsive: false,
+    responsive: true,
+
     legend:{
       display: false
 
@@ -28,7 +29,7 @@ export class BarChartComponent implements OnInit {
 
   public barChartColors: Array<any> = [
     {
-      backgroundColor: "red",
+      backgroundColor: "#34aab3",
     }
   ];
 

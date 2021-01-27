@@ -19,7 +19,7 @@ export class TableChartComponent implements OnInit  {
 
   ELEMENT_DATA: ServiceTable[] = [];
 
-  displayedColumns: string[] = ['id', 'instanceType', 'onDemandHours', 'reservedHours', 'totalHours','coverage'];
+  displayedColumns: string[] = ['instanceType', 'onDemandHours', 'reservedHours', 'totalHours','coverage'];
   dataSource = new MatTableDataSource(this.ELEMENT_DATA);
 
   @ViewChild(MatSort) sort: MatSort;

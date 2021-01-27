@@ -2,19 +2,19 @@
 
     <div class="row">
       <div class="col-sm-3">
-        <p>{{totalCost.currency}}{{totalCost.monthToDate|number:'.2-2'}}</p>
+        <h2>{{totalCost.currency}} {{totalCost.monthToDate|number:'.2-2'}}</h2>
         <p>Month To Date</p>
       </div>
       <div class="col-sm-3">
-        <p>{{totalCost.currency}}{{totalCost.estimatedSpend|number:'.2-2'}}</p>
+        <h2>{{totalCost.currency}} {{totalCost.estimatedSpend|number:'.2-2'}}</h2>
         <p> Estimated Spend</p>
       </div>
       <div class="col-sm-3">
-        <p>{{totalCost.currency}}{{totalCost.lastMonth|number:'.2-2'}}</p>
+        <h2>{{totalCost.currency}} {{totalCost.lastMonth|number:'.2-2'}}</h2>
         <p>Last Month</p>
       </div>
        <div class="col-sm-3">
-        <p style="color: #ff0000;">{{totalCost.currency}}{{totalCost.changeFromLastMonth|number:'.2-2'}}</p>
+        <h2 style="color: #ff0000;">{{totalCost.currency}} {{(totalCost.estimatedSpend-totalCost.lastMonth)|number:'.2-2'}}</h2>
         <p>Change From Last Month</p>
       </div>
     </div>
