@@ -15,6 +15,9 @@ import { DemoMaterialModule } from './material-module';
 import { BarChartComponent } from './bar-chart/bar-chart.component';
 import { Table2Component } from './table2/table2.component';
 import { TotalCostComponent } from './total-cost/total-cost.component';
+import { RouterModule } from '@angular/router';
+import { LoginComponent } from './login/login.component';
+import { RequestComponent } from './request/request.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +39,13 @@ import { TotalCostComponent } from './total-cost/total-cost.component';
     MatButtonModule,
     GoogleChartsModule,
     DemoMaterialModule,
-    ChartsModule
+    ChartsModule,
+    RouterModule.forRoot([
+      {path: 'login', component: LoginComponent},
+      {path: 'request', component: RequestComponent},
+      {path: 'home', component: HomeComponent},
+      {path: '', redirectTo: '/login', pathMatch: 'full'},
+    ]),
 
   ],
   providers: [],

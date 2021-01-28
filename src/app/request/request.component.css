@@ -1,0 +1,13 @@
+.form{
+  margin: 0 auto;
+  padding: 16px;
+  background-color: #F6F8FA;
+  border-radius: 16px;
+  border: 1px solid #EAECEF;
+  width: 300px;
+  height: 520px;
+  vertical-align: bottom;
+}
+mat-form-field{
+  width: 250px;
+}

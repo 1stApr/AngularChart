@@ -24,7 +24,10 @@ export class HomeComponent implements OnInit {
 
   destroy$: Subject<boolean> = new Subject<boolean>();
   constructor(private dataService: DataService) { }
-
+  buttonClick(){
+    console.log("buttonClick");
+  }
+  isShow = false;
   ngOnInit() {
     console.log("Run Home Component")
     this.getTotalCost();
