@@ -1,6 +1,7 @@
 import { Component, OnInit} from '@angular/core';
 import { ServicesBreakdown } from '../services_breakdown';
 import { AppComponent } from '../app.component';
+import { HomeComponent } from '../home/home.component';
 
 @Component({
   selector: 'app-table2',
@@ -16,7 +17,7 @@ export class Table2Component implements OnInit  {
     this.getServicesBreakdown()
   }
   getServicesBreakdown(){
-    this.servicesBreakdown = AppComponent.servicesBreakdown;
+    this.servicesBreakdown = HomeComponent.servicesBreakdown;
     this.total= this.servicesBreakdown.EC2+this.servicesBreakdown.EFS+this.servicesBreakdown.OTHER+this.servicesBreakdown.S3+this.servicesBreakdown.SUPPORT;
   }
 }

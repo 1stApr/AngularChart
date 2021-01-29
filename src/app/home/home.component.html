@@ -1,34 +1,22 @@
-<!-- <div>
-  <button (click) ="firstPage()" mat-button> First</button>
-  <button (click) ="previousPage()" mat-button> Previous</button>
-  <button (click) ="nextPage()" mat-button> Next</button>
-  <button (click) ="lastPage()" mat-button> Last</button>
-</div> -->
-<!-- <div style="padding: 13px;">
-  <mat-card *ngFor="let s of services" style="margin-top:11px;">
-    <mat-card-content>
-      <p>{{s.id}}   {{s.instanceType}}   {{s.onDemandHours}}   {{s.reservedHours}}   {{s.totalHours}}</p>
-    </mat-card-content>
-  </mat-card>
-  <mat-card *ngFor="let c of costings" style="margin-top:11px;">
-      <mat-card-content>
-        <p>{{c.id}}   {{c.name}}   {{c.time}}   {{c.cost}}</p>
-      </mat-card-content>
-  </mat-card>
-</div> -->
 
 <div class = "appComponent mx-4">
-
   <mat-toolbar>
     <div class="collapsible-header" (click)="isShow=!isShow;buttonClick()">
       <i class="material-icons" *ngIf="isShow">arrow_drop_down</i>
       <i class="material-icons" *ngIf="!isShow">arrow_right</i>
     </div>
     <span>Costing</span>
+    <span class="example-spacer"></span>
+    <div>
+      <button mat-icon-button [routerLink]="['/login']">
+        <mat-icon>power_settings_new</mat-icon>
+      </button>
+    </div>
+
   </mat-toolbar>
   <br>
   <div *ngIf="isShow; else noShow">
-    <app-home></app-home>
+    <!-- <app-home></app-home> -->
     <app-total-cost></app-total-cost>
     <br>
     <div class="container">

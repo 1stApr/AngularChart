@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ChartType } from 'chart.js';
 import { Color, Label, MultiDataSet } from 'ng2-charts';
 import { AppComponent } from '../app.component';
+import { HomeComponent } from '../home/home.component';
 import { ServicesBreakdown } from '../services_breakdown';
 @Component({
   selector: 'app-pie-chart',
@@ -30,7 +31,7 @@ export class PieChartComponent implements OnInit {
     this.getServicesBreakdown();
   }
   getServicesBreakdown(){
-    this.servicesBreakdown = AppComponent.servicesBreakdown;
+    this.servicesBreakdown = HomeComponent.servicesBreakdown;
     this.setDataPieChart();
   }
 

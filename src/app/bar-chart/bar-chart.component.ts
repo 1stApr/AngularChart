@@ -2,6 +2,7 @@ import { OnInit, ViewChild } from '@angular/core';
 import { Component, Input } from '@angular/core';
 import { BaseChartDirective } from 'ng2-charts';
 import { AppComponent } from '../app.component';
+import { HomeComponent } from '../home/home.component';
 import { Service } from '../service';
 @Component({
   selector: 'app-bar-chart',
@@ -42,7 +43,7 @@ export class BarChartComponent implements OnInit {
   }
 
   getServices(){
-    this.dataServices = AppComponent.dataServices;
+    this.dataServices = HomeComponent.dataServices;
     this.setDataBarChart();
   }
 

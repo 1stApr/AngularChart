@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TotalCost } from '../total_cost';
 import { AppComponent } from '../app.component';
+import { HomeComponent } from '../home/home.component';
 @Component({
   selector: 'app-total-cost',
   templateUrl: './total-cost.component.html',
@@ -17,6 +18,6 @@ export class TotalCostComponent implements OnInit {
   }
 
   getTotalCost(){
-    this.totalCost =  AppComponent.totalCost;
+    this.totalCost =  HomeComponent.totalCost;
   }
 }

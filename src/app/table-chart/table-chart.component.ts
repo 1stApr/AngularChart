@@ -2,6 +2,7 @@ import {Component, OnInit, ViewChild } from '@angular/core';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { AppComponent } from '../app.component';
+import { HomeComponent } from '../home/home.component';
 export interface ServiceTable {
   id: number;
   instanceType: string;
@@ -32,6 +33,6 @@ export class TableChartComponent implements OnInit  {
   }
   setDataTable(){
     console.log("SetDataTable");
-    this.dataSource = new MatTableDataSource(AppComponent.dataServices);
+    this.dataSource = new MatTableDataSource(HomeComponent.dataServices);
   }
 }
