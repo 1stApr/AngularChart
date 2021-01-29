@@ -8,7 +8,7 @@
     <span>Costing</span>
     <span class="example-spacer"></span>
     <div>
-      <button mat-icon-button [routerLink]="['/login']">
+      <button mat-icon-button (click)="logout()"  [routerLink]="['/login']" >
         <mat-icon>power_settings_new</mat-icon>
       </button>
     </div>

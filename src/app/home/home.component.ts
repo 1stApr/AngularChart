@@ -6,6 +6,9 @@ import { HttpResponse } from '@angular/common/http';
 import { Service } from '../service';
 import { TotalCost } from '../total_cost'
 import { ServicesBreakdown } from '../services_breakdown';
+import { User } from '../user';
+import { AuthenticationService } from '../login-server/authentication.services';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -13,6 +16,7 @@ import { ServicesBreakdown } from '../services_breakdown';
 })
 export class HomeComponent implements OnInit {
 
+  currentUser: User;
   private REST_COST_API_SERVER = 'http://localhost:3000/costing';
   private REST_TOTAL_COST_API_SERVER = 'http://localhost:3000/totalCost';
   private REST_SERVICE_API_SERVER = 'http://localhost:3000/services';
@@ -23,7 +27,16 @@ export class HomeComponent implements OnInit {
   public static totalCost =  new TotalCost;
 
   destroy$: Subject<boolean> = new Subject<boolean>();
-  constructor(private dataService: DataService) { }
+
+  constructor(private dataService: DataService,private router: Router,
+    private authenticationService: AuthenticationService) {
+      this.authenticationService.currentUser.subscribe(x => this.currentUser = x);
+    }
+  logout() {
+    this.authenticationService.logout();
+    this.router.navigate(['/login']);
+  }
+
   buttonClick(){
     console.log("buttonClick");
   }
